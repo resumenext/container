@@ -1,0 +1,41 @@
+{
+	"name": "resumenext/container",
+	"description": "PSR-11 compliant container",
+	"type": "library",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Resume Next",
+			"email": "resumenext@protonmail.com"
+		}
+	],
+	"require": {
+		"php": ">=7.0.0",
+		"container-interop/container-interop": "^1.2",
+		"container-interop/service-provider": "^0.3.0",
+		"psr/container": "^1.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"ResumeNext\\Container\\": "src/"
+		}
+	},
+	"require-dev": {
+		"fig-r/psr2r-sniffer": "^0.4.1",
+		"squizlabs/php_codesniffer": "~2.3",
+		"phpunit/phpunit": "^6.2"
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"ResumeNext\\ContainerTest\\": "test/"
+		}
+	},
+	"provide": {
+		"container-interop/container-interop-implementation": "^1.2",
+		"psr/container-implementation": "^1.0"
+	},
+	"scripts": {
+		"cs-check": "vendor/bin/phpcs",
+		"cs-fix": "vendor/bin/phpcbf"
+	}
+}
